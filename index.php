@@ -41,7 +41,8 @@ require "connect.php";
 	</div>
 	<div class="container">
 		<form>
-				<div class="input-field col s12">
+			<div class="row">
+				<div class="input-field col s6">
 				    <select>
 				      <option value="" disabled selected>Choose your option</option>
 				      <option value="1">Option 1</option>
@@ -50,6 +51,7 @@ require "connect.php";
 				    </select>
 				    <label>Materialize Select</label>
 				</div>
+			</div>
 			<div class="row">
 				<div class="input-field col s6">
 		        	<input id="age" type="text" class="validate">
