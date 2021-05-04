@@ -25,24 +25,53 @@ require "connect.php";
 		.brand-logo, nav a {
 			color: #000 !important;
 		}
+		.sky {
+			background-color: #BAE8FC;
+			padding: 70px 0 70px 0;
+		}
+		.btn {
+			background-color: #c4c4c4;
+		}
+		.btn:hover {
+			background-color: #c4c4c4;
+		}
 	</style>
 </head>
 <body>
 	<?php require "header.php"; ?>
-	<div class="container">
-		<div class="row">
-			<div class="col s6">
-				
-			</div>
-			<div class="col s6">
-				<a href="body_one.php"><button>ntkj 1</button></a>
+	<div class="sky">
+		<div class="container">
+			<div class="row">
+				<div class="col s7">
+					<!-- проблема -->
+					<div class="parallax-container">
+				        <img src="img/tree.png" height="100%">
+				    </div>
+				</div>
+				<div class="col s5">
+					<h1><b>HSupp</b></h1> 
+					<p>Это сайт для чего то которя поможет вам с чем-то </p>
+				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('.parallax');
+		    var instances = M.Parallax.init(elems, options);
+		});
+	</script>
+
+
+	<a class="waves-effect waves-light btn" href="body_one.php">тело</a>
+
+
+
 	<div class="container">
 		<form>
 			<div class="row">
 				<div class="input-field col s6">
+					<!-- проблема -->
 				    <select>
 				      <option value="" disabled selected>Choose your option</option>
 				      <option value="1">Option 1</option>
@@ -58,8 +87,18 @@ require "connect.php";
 		            <label for="age">Возраст</label>
 		        </div>
 			</div>
+			<a class="waves-effect waves-light btn" name="myBody">Отправить</a>
 	    </form>
 	</div>
+
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
