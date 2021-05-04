@@ -31,13 +31,32 @@ require "connect.php";
 	<?php require "header.php"; ?>
 	<div class="container">
 		<div class="row">
-			<div class="col s2">
+			<div class="col s6">
 				
 			</div>
-			<div class="col-10">
-				
+			<div class="col s6">
+				<a href="body_one.php"><button>ntkj 1</button></a>
 			</div>
 		</div>
+	</div>
+	<div class="container">
+		<form>
+				<div class="input-field col s12">
+				    <select>
+				      <option value="" disabled selected>Choose your option</option>
+				      <option value="1">Option 1</option>
+				      <option value="2">Option 2</option>
+				      <option value="3">Option 3</option>
+				    </select>
+				    <label>Materialize Select</label>
+				</div>
+			<div class="row">
+				<div class="input-field col s6">
+		        	<input id="age" type="text" class="validate">
+		            <label for="age">Возраст</label>
+		        </div>
+			</div>
+	    </form>
 	</div>
 
 
