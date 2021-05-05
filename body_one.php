@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 	<style type="text/css">
@@ -70,12 +70,14 @@
 			</div>
 		</div>
 	</div>
-	<script>8
+	<script>
 		var bodyParts = ["Живот", "Левая рука", "Правая рука", "Грудь", "Левая рука", "Правая рука", "Голова"];
 		var infodiv = document.getElementById('infoDiv')
 		function startAlert(bodyPart) {
 			infodiv.textContent = bodyParts[parseInt(bodyPart.id)];
 		}
 	</script>
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

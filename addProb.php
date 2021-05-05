@@ -9,8 +9,7 @@ require "connect.php";
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>	
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -23,8 +22,13 @@ require "connect.php";
 
 	<form action="uop.php" method="post">
 		<input type="text" name="specSolText">
+		<p class="range-field">
+	        <input type="range" min="0" max="10" name="dangerRange" />
+	    </p>
 		<input type="submit" name="specSolBtn">
 	</form>
 
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

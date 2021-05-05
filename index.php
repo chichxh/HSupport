@@ -12,8 +12,7 @@ require "connect.php";
 	<title>Главная</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>	
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 	<style type="text/css">
@@ -70,6 +69,7 @@ require "connect.php";
 
 
 	<a class="waves-effect waves-light btn" href="body_one.php">тело</a>
+	<a class="waves-effect waves-light btn" href="test.php">тест</a>
 
 
 
@@ -125,7 +125,6 @@ require "connect.php";
 
 
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ $problem = R::findAll('problems');
 <head>
 	<title></title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 	<style type="text/css">
@@ -49,8 +49,13 @@ $problem = R::findAll('problems');
 			    <div class="col s12 m6">
 			        <div class="card blue-grey darken-1">
 			            <div class="card-content white-text">
-				          <span class="card-title"><?= $problem[$i]->diagnosis; ?></span>
-				          <p><?= $problem[$i]->name; ?></p>
+				          	<span class="card-title"><?= $problem[$i]->diagnosis; ?></span>
+				          	<p><?= $problem[$i]->name; ?></p>
+				          	<div style="background-color: #000; width: 100%; height: 20px">
+				          		<div style="background-color: #fff; width: <?= $problem[$i]->dangerrnage; ?>0%; height: 20px">
+				          			
+				          		</div>
+				          	</div>
 				        </div>
 				        <div class="card-action">
 					        <a href="#">Просмотреть ответ</a>
@@ -67,6 +72,6 @@ $problem = R::findAll('problems');
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
