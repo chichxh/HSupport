@@ -106,6 +106,15 @@ require "connect.php";
     		<p>Это сайт для чего то которя поможет вам с чем-то</p>
     	</div>
     </div>
+    <div class="row marg">
+    	<div class="col s5 right-align">
+    		<h1><b>Лень</b></h1>
+    		<p>Это сайт для чего то которя поможет вам с чем-то</p>
+    	</div>
+    	<div class="col s7 right-align">
+    		<img src="img/lazy.png" width="70%">
+    	</div>
+    </div>
 
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
