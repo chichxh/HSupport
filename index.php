@@ -32,12 +32,18 @@ require "connect.php";
 			background-color: #BAE8FC;
 			padding-top: 70px;
 			color: #000;
+			
 		}
-		.btn {
-			background-color: #c4c4c4;
+		.bttn {
+			background-color: #24496B;
+			padding: 10px 50px 10px 50px;
+			color: #fff;
+			border: 0px;
+			border-radius: 10px;
+			font-family: Montserrat;
 		}
-		.btn:hover {
-			background-color: #c4c4c4;
+		.bttn:hover {
+			background-color: #24496B;
 		}
 		.marg {
 			margin-top: 100px;
@@ -50,6 +56,10 @@ require "connect.php";
 			border-radius: 57px;
 			padding: 90px 80px 90px 80px;
 			background: linear-gradient(180deg, #2A5073 0%, #032341 110.74%);
+		}
+		.pd-0 {
+			padding: 0;
+			margin:0;
 		}
 	</style>
 </head>
@@ -69,12 +79,35 @@ require "connect.php";
 				</div>
 			</div>
 		</div>
-	</div>
+		<!-- <div style="top: 492px; position: absolute; height: 194px;width: 100%; z-index: -70">
+			<svg  viewBox="0 0 1638 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g filter="url(#filter0_d)">
+			<path d="M209.5 23.5L56.5 85L4 186H1633.5L1583.5 0L1080 108.5L790 62L554 108.5L209.5 23.5Z" fill="#A198FF" fill-opacity="0.7"/>
+			</g>
+			<defs>
+			<filter id="filter0_d" x="0" y="0" width="1637.5" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+			</filter>
+			</defs>
+			</svg>
+		</div> -->
+		
 
-	<div class="row mt-5">
+
+			<!-- <img src="img/tp.png" style="margin:-20px; width: 100%"> -->
+	</div>
+	
+
+	<div class="row mt-5" style="z-index: 100;">
 		<div class="col s1"></div>
 		<div class="col s1">
-			<img src="img/rect.png">
+			<img src="img/rect.png" width="100%">
 		</div>
 		<div class="col s5 mt-5">
 			<div class="row">
@@ -84,7 +117,7 @@ require "connect.php";
 				<p>Это процесс изменений в организме подростка, вследствие которых он становится взрослым и способным к продолжению рода. Несмотря на индивидуальные различия, в среднем начинается с 8–9 лет у девочек и с 10–11 у мальчиков, а заканчивается 16–17 лет у жен­щин и 19–20 лет у муж­чин[</p>
 			</div>
 			<div class="row">
-				<button class="btn">Перейти</button>
+				<a href="nulless.php"><button class="bttn"><p>Перейти</p></button></a>
 			</div>
 		</div>
 		<div class="col s4 mt-5">
@@ -112,7 +145,7 @@ require "connect.php";
 						<img src="img/metka.png">
 					</div>
 					<div class="row">
-						<button class="btn">Тест</button>
+						<a href="testpub.php"><button class="bttn">Тест</button></a>
 					</div>
 				</div>
 			</div>
@@ -129,7 +162,7 @@ require "connect.php";
 	<div class="container">
 		<div class="row marg">
 	    	<div class="col s7">
-	    		<img src="img/health.png" width="70%">
+	    		<a href="doctor.php"><img src="img/health.png" width="70%"></a>
 	    	</div>
 	    	<div class="col s5">
 	    		<h1><b>Доктор</b></h1>
