@@ -1,5 +1,7 @@
 <?
 require "connect.php";
+
+// форум часть типа
 $solutions = ["решение 1", "прими болеутоляющие таблетки", "отдохни", "решение 4"];
 $diagnosises = ["головная боль", "головокружение", "переутомление"];
 $id = 2; 
@@ -19,6 +21,25 @@ if (isset($_POST['specSolBtn'])) {
 	$text->dangerrnage = $_POST['dangerRange'];
 	R::store($text);
 	header("Location: addProb.php");
+}
+
+
+// тело
+
+if (isset($_POST['myBody'])) {
+	$height = $_POST['height']/100;
+	$weight = $_POST['weight'];
+	$koef = $weight / ($height * $height);
+	echo $koef;
+	if ($koef >= 20 and $koef <=26) {
+		echo "ты нормальный";
+	}
+	if ($koef > 26) {
+		echo "ты толстый";
+	}
+	if ($koef < 20) {
+		echo "ты тонкий";
+	}
 }
 
 ?>
