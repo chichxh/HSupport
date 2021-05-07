@@ -19,7 +19,7 @@ require "connect.php";
 		body {
 			font-family: 'Montserrat', Arial, sans-serif;
 			background: linear-gradient(180deg, #2F2B5A 38.54%, #5C5C98 54.17%, #A0A4FF 98.44%);
-			color: #fff;
+			color: #000;
 			font-size: 20px;
 			
 		}
@@ -151,7 +151,7 @@ require "connect.php";
 			</div>
 			<div class="row">
 				<h1 class="center-align"><b>Чат</b></h1>
-				<div class="col s12 cal">
+				<div class="col s12">
 					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
 					<script type="text/javascript" src="https://comet-server.ru/CometServerApi.js" ></script>
 					<script type="text/javascript" src="https://comet-server.ru/doc/html_chat.js" ></script>

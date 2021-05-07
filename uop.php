@@ -7,19 +7,17 @@ $id = 2;
 if (isset($_POST['textBtn'])) {
 	$text = R::dispense('problems');
 	$text->name = $_POST['textName'];
-	$text->solution = $solutions[$id];
-	$text->diagnosis = $diagnosises[$id];
 	R::store($text);
-	header("Location: addProb.php");
+	header("Location: cards.php");
 }
 
-$idOfProb = 4;
+
 if (isset($_POST['specSolBtn'])) {
-	$text = R::load('problems', $idOfProb);
+	$text = R::load('problems', $_POST['idofprob']);
 	$text->specsol = $_POST['specSolText'];
 	$text->dangerrnage = $_POST['dangerRange'];
 	R::store($text);
-	header("Location: specsite.php");
+	header("Location: spec.php");
 }
 
 if (isset($_POST['logbtn'])) {

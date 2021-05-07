@@ -130,8 +130,7 @@ $problem = R::findAll('problems');
 			    <div class="col s8">
 			        <div class="card">
 			            <div class="card-content black-text">
-				          	<span class="card-title"><h2><?= $problem[$i]->diagnosis; ?></h2></span>
-				          	<p><?= $problem[$i]->name; ?></p>
+				          	<span class="card-title"><p><?= $problem[$i]->id; ?>. <?= $problem[$i]->name; ?></p></span>
 				          	<div style="background-color: #fff; width: 100%; height: 20px">
 				          		<div style="background-color: #55F2B8; width: <?= $problem[$i]->dangerrnage; ?>%; height: 20px">
 				          		</div>

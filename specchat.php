@@ -19,7 +19,7 @@ require "connect.php";
 		body {
 			font-family: 'Montserrat', Arial, sans-serif;
 			background: linear-gradient(180deg, #2F2B5A 38.54%, #5C5C98 54.17%, #A0A4FF 98.44%);
-			color: #fff;
+			color: #000;
 			font-size: 20px;
 			
 		}
@@ -113,16 +113,16 @@ require "connect.php";
 			<div class="container">
 				<div class="row">
 					<div class="col s7">
-			        <img src="img/chat.png">
-			    </div>
-					</div>
-					<div class="col s5">
+				        <img src="img/chat.png">
+				    </div>
+				    <div class="col s5">
 						<h1><b>Чат</b></h1> 
 						<p>Здесь вы сможете проконсультироватся со специалистом о проблеме или же сообщить о проблеме ребенка</p>
 					</div>
-				</div>
+				</div>	
 			</div>
 		</div>
+	</div>
 		<div class="container">
 			<div class="row">
 				<div class="col s3">

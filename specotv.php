@@ -19,7 +19,7 @@ require "connect.php";
 		body {
 			font-family: 'Montserrat', Arial, sans-serif;
 			background: #292650;
-			color: #fff;
+			color: #000	;
 			font-size: 20px;
 			
 		}
@@ -116,7 +116,14 @@ require "connect.php";
 		<div class="container">
 			<div class="row">
 				<form action="uop.php" method="post">
-					<input type="text" name="specSolText">
+					<div class="input-field col s12">
+			          	<input id="idof" type="text" class="validate" name="idofprob">
+			          	<label for="idof">Номер карточки</label>
+			        </div>
+			       	<div class="input-field col s12">
+			          	<input id="soltext" type="text" class="validate" name="specSolText">
+			          	<label for="soltext">Ваше решение</label>
+			        </div>
 					<p class="range-field">
 				        <input type="range" min="0" max="100" name="dangerRange" />
 				    </p>
@@ -125,6 +132,6 @@ require "connect.php";
 			</div>
 		</div>
 	</div>		
-
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
