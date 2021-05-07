@@ -1,6 +1,5 @@
 <?php
 require "connect.php";
-$dates = R::findAll('calendar');
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +93,6 @@ $dates = R::findAll('calendar');
 			border-radius: 21px;
 			padding: 50px 30px 50px 30px !important;
 			background-color: #6BFFD3;
-			color: #000;
 		}
 	</style>
 </head>
@@ -118,56 +116,16 @@ $dates = R::findAll('calendar');
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col s3">
-					<button class="btn whitebtn" onclick="whiteTheme()">1 - 7  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn greenbtn" onclick="greenTheme()">8 - 12  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn bluebtn" onclick="blueTheme()">13 - 17  лет</button>
-				</div>
-				<div class="col s3 sm">
-					<h1>В чем отличие</h1>
-					<p>Для каждой возрастной группы есть разные профилактические работы и врачи</p>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col s3"></div>
-				<div class="col s6 green">
-					<h3>Предупреждение</h3>
-				</div>
-				<div class="col s3"></div>
-			</div>
-			<div class="row">
-				<h1 class="center-align"><b>Календарь</b></h1>
+				<h1 class="center-align"><b>Добавить расписане	</b></h1>
 				<div class="col s12 cal">
-					<? for ($i=1; $i <= end($dates)->id; $i++): ?>
-						<p>В <?= $dates[$i]->date; ?></p>
-						<p>Нужно <?= $dates[$i]->event; ?></p>
-					<? endfor; ?>
+					<form action="uop.php" method="post">
+						<input type="date" name="dateof">
+						<input type="text" name="event">
+						<input type="submit" name="eventbtn" class="btn">
+					</form>
 				</div>
 			</div>
 		</div>
-		
 	</div>
-		<script type="text/javascript">
-			var body = document.getElementById('body')
-			var block = document.getElementById('bodyy')
-			function whiteTheme() {
-				block.style.background = "#F9F9FF"
-				body.style.color = "#000"
-			}
-			function greenTheme() {
-				block.style.background = "#BEF4C7"
-				body.style.color = "#000"
-			}	
-			function blueTheme() {
-				block.style.background = "#292650"
-				body.style.color = "#fff"
-			}		
-		</script>
 </body>
 </html>

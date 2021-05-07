@@ -39,4 +39,12 @@ if (isset($_POST['specProfBtn'])) {
 	R::store($text);
 	header("Location: specprofil.php");
 }
+
+if (isset($_POST['eventbtn'])) {
+	$text = R::dispense('calendar');
+	$text->date = $_POST['dateof'];
+	$text->event = $_POST['event'];
+	R::store($text);
+	header("Location: speccalend.php");
+}
 ?>
