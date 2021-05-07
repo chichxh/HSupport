@@ -138,6 +138,7 @@ $dates = R::findAll('calendar');
 				<div class="col s3"></div>
 				<div class="col s6 green">
 					<h3>Предупреждение</h3>
+					<p>В этом календаре указаны расписание важных профилактичсеких работ, которое может быть вам полезным</p>
 				</div>
 				<div class="col s3"></div>
 			</div>

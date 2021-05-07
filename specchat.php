@@ -125,23 +125,6 @@ require "connect.php";
 	</div>
 		<div class="container">
 			<div class="row">
-				<div class="col s3">
-					<button class="btn whitebtn" onclick="whiteTheme()">1 - 7  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn greenbtn" onclick="greenTheme()">8 - 12  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn bluebtn" onclick="blueTheme()">13 - 17  лет</button>
-				</div>
-				<div class="col s3 sm">
-					<h1>В чем отличие</h1>
-					<p>Для каждой возрастной группы есть разные профилактические работы и врачи</p>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
 				<div class="col s3"></div>
 				<div class="col s6 green">
 					<h3>Предупреждение</h3>
@@ -179,21 +162,5 @@ require "connect.php";
 		</div>
 		
 	</div>
-		<script type="text/javascript">
-			var body = document.getElementById('body')
-			var block = document.getElementById('bodyy')
-			function whiteTheme() {
-				block.style.background = "#F9F9FF"
-				body.style.color = "#000"
-			}
-			function greenTheme() {
-				block.style.background = "#BEF4C7"
-				body.style.color = "#000"
-			}	
-			function blueTheme() {
-				block.style.background = "#292650"
-				body.style.color = "#fff"
-			}		
-		</script>
 </body>
 </html>
