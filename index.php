@@ -125,49 +125,45 @@ require "connect.php";
 		    </div>
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col s3">
-					<button class="btn whitebtn" onclick="whiteTheme()">1 - 7  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn greenbtn" onclick="greenTheme()">8 - 12  лет</button>
-				</div>
-				<div class="col s3">
-					<button class="btn bluebtn" onclick="blueTheme()">13 - 17  лет</button>
-				</div>
-				<div class="col s3 sm">
-					<h1>В чем отличие</h1>
-					<p>Для каждой возрастной группы есть разные профилактические работы и врачи</p>
-				</div>
-			</div>
-		</div>
+		<?php
+		require "devider.php";
+		?>
 
 		<div class="container">
 			<div class="row mt-5" id="cards">
 				<div class="col s7">
 					<h1>Карточки</h1>
-					<p>Здесь вы узнаете о жизни разных больниц, о профилатике, о важности не боятся идти к врачу и говорить и своих проблемах</p>
+					<p>В этой страничке вы сможете увидеть проблемы других детей и рекомендации от врачей на счет этой проблемы </p>
 				</div>
 				<div class="col s5">
 					<img src="img/cards.png" width="100%"> <br>
-					<a href="chat.php"><button class="btn">Подробнее</button></a>
+					<a href="cards.php"><button class="btn">Подробнее</button></a>
 				</div>
 			</div>
-			<div class="row mt-5" id="abody">
+			<div class="row mt-5" id="aabody">
 				<div class="col s5">
 					<img src="img/abody.png" width="100%"> <br>
-					<a href="chat.php"><button class="btn">Подробнее</button></a>
+					<a href="aabody.php"><button class="btn">Подробнее</button></a>
 				</div>	
 				<div class="col s7 right-align">
 					<h1>Подробнее о теле</h1>
-					<p>Здесь вы узнаете о жизни разных больниц, о профилатике, о важности не боятся идти к врачу и говорить и своих проблемах</p>
+					<p>Начни изучать свое тело с HSupp</p>
+				</div>
+			</div>
+			<div class="row mt-5" id="abody" style="display: none">
+				<div class="col s5">
+					<img src="img/abody.png" width="100%"> <br>
+					<a href="abody.php"><button class="btn">Подробнее</button></a>
+				</div>	
+				<div class="col s7 right-align">
+					<h1>Подробнее о теле</h1>
+					<p>Начни изучать свое тело с HSupp</p>
 				</div>
 			</div>
 			<div class="row mt-5" id="chat">
 				<div class="col s7">
 					<h1>Чат</h1>
-					<p>Здесь вы узнаете о жизни разных больниц, о профилатике, о важности не боятся идти к врачу и говорить и своих проблемах</p>
+					<p>Здесь вы сможете проконсультироватся со специалистом о проблеме или же сообщить о проблеме ребенка</p>
 				</div>
 				<div class="col s5">
 					<img src="img/chat.png" width="100%"> <br>
@@ -177,164 +173,66 @@ require "connect.php";
 			<div class="row mt-5" id="table">
 				<div class="col s7">
 					<h1>Профилактика</h1>
-					<p>Здесь вы узнаете о жизни разных больниц, о профилатике, о важности не боятся идти к врачу и говорить и своих проблемах</p>
+					<p>В этой страничке доступна информация, которая может помочь лучше понимать как оберегать свое здоровье</p>
 				</div>
 				<div class="col s5">
 					<img src="img/table.png" width="100%"> <br>
-					<a href="chat.php"><button class="btn">Подробнее</button></a>
+					<a href="profil.php"><button class="btn">Подробнее</button></a>
 				</div>
 			</div>
 			<div class="row mt-5" id="schedule">
 				<div class="col s5">
 					<img src="img/schedule.png" width="100%"> <br>
-					<a href="chat.php"><button class="btn">Подробнее</button></a>
+					<a href="calend.php"><button class="btn">Подробнее</button></a>
 				</div>
 				<div class="col s7 right-align">
 					<h1>Календарь</h1>
-					<p>Здесь вы узнаете о жизни разных больниц, о профилатике, о важности не боятся идти к врачу и говорить и своих проблемах</p>
+					<p>Здесь вы сможете увидеть занятость разных специалистов и записаться к ним </p>
 				</div>
 			</div>
 		</div>
 
-		<script type="text/javascript">
-			var body = document.getElementById('body')
-			var block = document.getElementById('bodyy')
+<script type="text/javascript">
+	var body = document.getElementById('body')
+	var block = document.getElementById('bodyy')
 
-			var cards = document.getElementById('cards')
-			var abody = document.getElementById('abody')
-			var chat = document.getElementById('chat')
-			var table = document.getElementById('table')
-			var schedule = document.getElementById('schedule')
-			function whiteTheme() {
-				block.style.background = "#F9F9FF"
-				body.style.color = "#000"
-				cards.style.display = "none"
-				abody.style.display = "none"
-				chat.style.display = "block"
-				table.style.display = "block"
-				schedule.style.display = "block"
-			}
-			function greenTheme() {
-				block.style.background = "#BEF4C7"
-				body.style.color = "#000"
-				cards.style.display = "none"
-				abody.style.display = "block"
-				chat.style.display = "block"
-				table.style.display = "block"
-				schedule.style.display = "block"
-			}	
-			function blueTheme() {
-				block.style.background = "#292650"
-				body.style.color = "#fff"
-				cards.style.display = "none"
-				abody.style.display = "block"
-				chat.style.display = "none"
-				table.style.display = "block"
-				schedule.style.display = "block"
-			}		
-		</script>
-
-
-
-
-
-
-
-
-
-
-
-		
-
-		<div class="row mt-5" style="z-index: 100;">
-			<div class="col s1"></div>
-			<div class="col s1">
-				<img src="img/rect.png" width="100%">
-			</div>
-			<div class="col s5 mt-5">
-				<div class="row">
-					<h1>Знаешь ли что такое пубертатный период?</h1>
-				</div>
-				<div class="row">
-					<p>Это процесс изменений в организме подростка, вследствие которых он становится взрослым и способным к продолжению рода. Несмотря на индивидуальные различия, в среднем начинается с 8–9 лет у девочек и с 10–11 у мальчиков, а заканчивается 16–17 лет у жен­щин и 19–20 лет у муж­чин[</p>
-				</div>
-				<div class="row">
-					<a href="nulless.php"><button class="bttn"><p>Перейти</p></button></a>
-				</div>
-			</div>
-			<div class="col s4 mt-5">
-				<img src="img/glow.png">
-			</div>
-			<div class="col s1 mt-5">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s10"></div>
-			<div class="col s2 left-align">
-				<img src="img/rect.png">
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row blue">
-				<div class="row">
-					<div class="col s7">
-						<h1>Пубертатный ли у тебя возраст?</h1>
-						<p>Это процесс изменений в организме подростка, вследствие которых он становится взрослым и способным к продолжению рода. Несмотря на индивидуальные различия, в среднем начинается с 8–9 лет у девочек и с 10–11 у мальчиков, а заканчивается 16–17 лет у жен­щин и 19–20 лет у муж­чин[</p>
-					</div>
-					<div class="col s5">
-						<div class="row">
-							<img src="img/metka.png">
-						</div>
-						<div class="row">
-							<a href="testpub.php"><button class="bttn">Тест</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s2 right-align">
-				<img src="img/rect.png">
-			</div>
-			<div class="col s10"></div>
-		</div>
-
-		
-		<div class="container">
-			<div class="row marg">
-		    	<div class="col s7">
-		    		<a href="doctor.php"><img src="img/health.png" width="70%"></a>
-		    	</div>
-		    	<div class="col s5">
-		    		<h1><b>Жизнь больницы</b></h1>
-		    		<p>Боишься ходить в больницы? Не знаешь как правильно чистить зубы или расписания профилактических работ? В этой странице вы найдете все необходимое, что поможет вам вести здоровый образ жизни и знать об услугах больниц. Также, здесь ты сможешь заранее договариваться с врачами из твоей больницы.</p>
-		    	</div>
-		    </div>
-		    <div class="row marg">
-		    	<div class="col s5 right-align">
-		    		<h1><b>Спорт</b></h1>
-		    		<p>Во время пубертатного периода организм человека ведет себя иначе. В этой странице вы сможете найти специальные упражнения которые смогут помочь сделать свое тело желаемым во время пубертатного периода.</p>
-		    	</div>
-		    	<div class="col s7 right-align">
-		    		<a href="sports.php"><img src="img/ball.png" width="70%"></a>
-		    	</div>
-		    </div>
-		    <div class="row marg">
-		    	<div class="col s7">
-		    		<a href="trash.php"><img src="img/trsh.png" width="70%"></a>
-		    	</div>
-		    	<div class="col s5">
-		    		<h1><b>Нездоровые привычки</b></h1>
-		    		<p>Далеко не секрет, что большинство плохих привычек приходят в подростковые года, также не секрет что и во время этого периода можно от него избавиться. В этой страничке вы узнаете о вреде плоких привычек и сможете почитать или оставить свой опыт с плохими привычками. </p>
-		    	</div>
-		    </div>
-		</div>
-		<?php
-		require "footer.php";
-		?>
-	</div>
-	
+	var cards = document.getElementById('cards')
+	var abody = document.getElementById('abody')
+	var aabody = document.getElementById('aabody')
+	var chat = document.getElementById('chat')
+	var table = document.getElementById('table')
+	var schedule = document.getElementById('schedule')
+	function whiteTheme() {
+		block.style.background = "#F9F9FF"
+		body.style.color = "#000"
+		cards.style.display = "none"
+		abody.style.display = "none"
+		aabody.style.display = "none"
+		chat.style.display = "block"
+		table.style.display = "block"
+		schedule.style.display = "block"
+	}
+	function greenTheme() {
+		block.style.background = "#BEF4C7"
+		body.style.color = "#000"
+		cards.style.display = "none"
+		abody.style.display = "block"
+		aabody.style.display = "none"
+		chat.style.display = "block"
+		table.style.display = "block"
+		schedule.style.display = "block"
+	}	
+	function blueTheme() {
+		block.style.background = "#292650"
+		body.style.color = "#fff"
+		cards.style.display = "block"
+		abody.style.display = "none"
+		aabody.style.display = "block"
+		chat.style.display = "none"
+		table.style.display = "block"
+		schedule.style.display = "block"
+	}		
+</script>
 
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
@@ -346,14 +244,6 @@ require "connect.php";
     var instances = M.Modal.init(elems, 250);
   });
 </script>
-
-
-
-<!-- <a class="waves-effect waves-light btn" href="body_one.php">тело</a>
-<a class="waves-effect waves-light btn" href="test.php">тест</a> -->
-
-
-
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
