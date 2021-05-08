@@ -45,4 +45,17 @@ if (isset($_POST['eventbtn'])) {
 	R::store($text);
 	header("Location: speccalend.php");
 }
+
+if (isset($_POST['combtn'])) {
+	$text = R::dispense('comchat');
+	$text->comtext = "Дежурный врач: ".$_POST['comtext'];	
+	R::store($text);
+	header("Location: specchat.php");
+}
+if (isset($_POST['ncombtn'])) {
+	$text = R::dispense('comchat');
+	$text->comtext = $_POST['ncomtext'];	
+	R::store($text);
+	header("Location: chat.php");
+}
 ?>

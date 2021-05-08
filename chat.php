@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+$chat = R::findAll('comchat');	
 ?>
 
 <!DOCTYPE html>
@@ -94,16 +95,6 @@ require "connect.php";
 			padding: 50px 30px 50px 30px !important;
 			background-color: #6BFFD3;
 		}
-		.holder-html-chat{ border: 1px solid #ccc;padding:10px;background-color: #fff;width: 600px;}
-		.html-chat-history{ max-width: 600px; overflow: auto;max-height: 900px; border: 1px solid #ccc;padding: 5px;}
-		.html-chat-js-name{ margin-top:10px; }
-		.html-chat-js-input{ max-width: 600px;max-height: 100px;width: 600px;margin-top:10px; }
-		.html-chat-js-button-holder{ margin-bottom: 0px;margin-top: 10px; }
-		.html-chat-js-button-holder input{ width: 220px; }
-		.html-chat-js-answer{ float:right; }
-		.html-chat-js-answer a{ color: #777;font-size: 12px;}
-		.html-chat-js-answer a:hover{ color: #338;font-size: 12px;}
-		.html-chat-msg{ margin: 0px; }
 	</style>
 </head>
 <body id="body">
@@ -153,29 +144,24 @@ require "connect.php";
 			<div class="row">
 				<h1 class="center-align"><b>Чат</b></h1>
 				<div class="col s12">
-					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
-					<script type="text/javascript" src="https://comet-server.ru/CometServerApi.js" ></script>
-					<script type="text/javascript" src="https://comet-server.ru/doc/html_chat.js" ></script>
-					<link rel="stylesheet" type="text/css" href="https://comet-server.ru/doc/html_chat.css"></link>
-
-					<!-- Осталось настроить сам чат и запустить, для этого пишем небольшой скрипт. -->
-					<div id="html-chat"></div>
-
-					<script>
-
-					   /**
-					    * Чат работает на comet-server.ru
-					    * По любым вопросам обращайтесь support@comet-server.ru или на сайт comet-server.ru
-					    */
-					    $(document).ready(function()
-					    {
-					       // Запуск api комет сервера
-					       CometServer().start({dev_id: 15 }) // Идентификатор разработчика на comet-server.ru
-
-					       // Запуск чата. Передаём ему элемент в котором надо создать окно чата.
-					       htmljs_Chat_Init( $("#html-chat") )
-					    });
-					</script>
+					<div class="row cal">
+						<? for ($i=1; $i <= end($chat)->id; $i++): ?>
+							<div class="row">
+								<p>- <?= $chat[$i]->comtext; ?></p>
+							</div>
+						<? endfor; ?>
+					</div>
+					<div class="row">
+						<div class="col s12 cal">
+							<form action="uop.php" method="post">
+								<div class="input-field col s12">
+						          	<input id="idof" type="text" class="validate" name="ncomtext">
+						          	<label for="idof">Введите текст</label>
+						        </div>
+						        <input type="submit" name="ncombtn" class="btn">
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

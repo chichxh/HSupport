@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+$chat = R::findAll('comchat');
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ require "connect.php";
         }
 		body {
 			font-family: 'Montserrat', Arial, sans-serif;
-			background: linear-gradient(180deg, #2F2B5A 38.54%, #5C5C98 54.17%, #A0A4FF 98.44%);
+			background: #292650;
 			color: #000;
 			font-size: 20px;
 			
@@ -53,7 +54,7 @@ require "connect.php";
 		.green {
 			border-radius: 21px;
 			padding: 50px 30px 50px 30px !important;
-			background: #C8F8FF;
+			background: #A3C2CF !important;
 		}
 		.pd-0 {
 			padding: 0;
@@ -74,36 +75,14 @@ require "connect.php";
 			box-shadow: none;
 			border-radius: 42px;
 		}
-		.whitebtn, .whitebtn:hover {
-			background-color: #F9F9FF;
-			color: #000;
-		}
-		.greenbtn, .greenbtn:hover {
-			background-color: #BEF4C7;
-			color: #000;
-		}
-		.bluebtn, .bluebtn:hover {
-			background-color: #292650;
-			color: #fff;
-		}
 		.sm {
 			font-size: 18px;
 		}
 		.cal {
 			border-radius: 21px;
 			padding: 50px 30px 50px 30px !important;
-			background-color: #6BFFD3;
+			background-color: #A3C2CF;
 		}
-		.holder-html-chat{ border: 1px solid #ccc;padding:10px;background-color: #fff;width: 600px;}
-		.html-chat-history{ max-width: 600px; overflow: auto;max-height: 900px; border: 1px solid #ccc;padding: 5px;}
-		.html-chat-js-name{ margin-top:10px; }
-		.html-chat-js-input{ max-width: 600px;max-height: 100px;width: 600px;margin-top:10px; }
-		.html-chat-js-button-holder{ margin-bottom: 0px;margin-top: 10px; }
-		.html-chat-js-button-holder input{ width: 220px; }
-		.html-chat-js-answer{ float:right; }
-		.html-chat-js-answer a{ color: #777;font-size: 12px;}
-		.html-chat-js-answer a:hover{ color: #338;font-size: 12px;}
-		.html-chat-msg{ margin: 0px; }
 	</style>
 </head>
 <body id="body">
@@ -131,36 +110,26 @@ require "connect.php";
 				</div>
 				<div class="col s3"></div>
 			</div>
+			<h1 class="center-align"><b>Чат</b></h1>
+			<div class="row cal">
+				<? for ($i=1; $i <= end($chat)->id; $i++): ?>
+					<div class="row">
+						<p>- <?= $chat[$i]->comtext; ?></p>
+					</div>
+				<? endfor; ?>
+			</div>
 			<div class="row">
-				<h1 class="center-align"><b>Чат</b></h1>
 				<div class="col s12 cal">
-					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
-					<script type="text/javascript" src="https://comet-server.ru/CometServerApi.js" ></script>
-					<script type="text/javascript" src="https://comet-server.ru/doc/html_chat.js" ></script>
-					<link rel="stylesheet" type="text/css" href="https://comet-server.ru/doc/html_chat.css"></link>
-
-					<!-- Осталось настроить сам чат и запустить, для этого пишем небольшой скрипт. -->
-					<div id="html-chat"></div>
-
-					<script>
-
-					   /**
-					    * Чат работает на comet-server.ru
-					    * По любым вопросам обращайтесь support@comet-server.ru или на сайт comet-server.ru
-					    */
-					    $(document).ready(function()
-					    {
-					       // Запуск api комет сервера
-					       CometServer().start({dev_id: 15 }) // Идентификатор разработчика на comet-server.ru
-
-					       // Запуск чата. Передаём ему элемент в котором надо создать окно чата.
-					       htmljs_Chat_Init( $("#html-chat") )
-					    });
-					</script>
+					<form action="uop.php" method="post">
+						<div class="input-field col s12">
+				          	<input id="idof" type="text" class="validate" name="comtext">
+				          	<label for="idof">Введите текст</label>
+				        </div>
+				        <input type="submit" name="combtn" class="btn">
+					</form>
 				</div>
 			</div>
 		</div>
-		
-	</div>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
