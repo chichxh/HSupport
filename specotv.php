@@ -94,6 +94,9 @@ require "connect.php";
 			padding: 50px 30px 50px 30px !important;
 			background-color: #6BFFD3;
 		}
+		input {
+			color: #fff;
+		}
 	</style>
 </head>
 <body id="body">
@@ -124,14 +127,14 @@ require "connect.php";
 			          	<input id="soltext" type="text" class="validate" name="specSolText">
 			          	<label for="soltext">Ваше решение</label>
 			        </div>
-					<p class="range-field">
+					<p >
 				        <input type="range" min="0" max="100" name="dangerRange" />
-				    </p>
-					<input type="submit" name="specSolBtn">
+				    </p>	
+					<input type="submit" name="specSolBtn" class="btn">
 				</form>
 			</div>
 		</div>
-	</div>		
+	</div>	
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

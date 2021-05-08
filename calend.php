@@ -147,7 +147,7 @@ $dates = R::findAll('calendar');
 				<div class="col s12 cal">
 					<? for ($i=1; $i <= end($dates)->id; $i++): ?>
 						<p>В <?= $dates[$i]->date; ?></p>
-						<p>Нужно <?= $dates[$i]->event; ?></p>
+						<p><?= $dates[$i]->event; ?></p>
 					<? endfor; ?>
 				</div>
 			</div>

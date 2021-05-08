@@ -51,6 +51,9 @@ require "connect.php";
 		footer {
 			background: linear-gradient(180deg, #2A5073 0%, #032341 110.74%);
 		}
+		input {
+			color: #fff;
+		}
 	</style>
 </head>
 <body>

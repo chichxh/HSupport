@@ -97,6 +97,9 @@ require "connect.php";
 			padding: 50px 30px 50px 30px !important;
 			background-color: #6BFFD3;
 		}
+		input {
+			color: #fff;
+		}
 	</style>
 </head>
 <body id="body">

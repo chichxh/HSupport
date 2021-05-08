@@ -90,6 +90,9 @@ $profil = R::findAll('profil');
 		.sm {
 			font-size: 18px;
 		}
+		input {
+			color: #fff;
+		}
 	</style>
 </head>
 <body id="body">
